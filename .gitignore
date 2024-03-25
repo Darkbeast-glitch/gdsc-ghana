@@ -20,4 +20,4 @@ __pycache__/
 /logs/
 
 # Dependency directories
-venv/
+env/
