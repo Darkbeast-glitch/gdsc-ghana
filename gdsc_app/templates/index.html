@@ -1,0 +1,935 @@
+{% extends 'base.html '%}
+{% load static %}
+{% block content %}
+
+<style>
+    li.info {
+        color: blue;
+    }
+
+    li.success {
+        color: green;
+    }
+
+    li.warning {
+        color: orange;
+    }
+
+    li.error {
+        color: red;
+    }
+</style>
+
+<body>
+    <!-- ? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <!-- Gdsc ghana loading logo -->
+                    <img src="{% static 'assets/img/logo/career.png' %}" alt="Gdsc Ghana">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+    <header>
+        <!--? Header Start -->
+        <div class="header-area">
+            <div class="main-header header-sticky">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <!-- Logo -->
+                        <div class="col-xl-2 col-lg-2 col-md-1">
+                            <div class="logo">
+                                <a href="index.html"><img class="small-logo"
+                                        src="{% static 'assets/img/logo/career.png' %}" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10">
+                            <div class="menu-main d-flex align-items-center justify-content-end">
+                                <!-- Main-menu -->
+                                <div class="main-menu f-right d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a href="/">Home</a></li>
+                                            <!-- <li><a href="about.html">About</a></li>
+                                        <li><a href="spakers.html">Spakers</a></li>
+                                        <li><a href="schedule.html">Schedule</a></li>
+                                        <li><a href="blog.html">Blog</a>
+                                            <ul class="submenu">
+                                                <li><a href="blog.html">Blog</a></li>
+                                                <li><a href="blog_details.html">Blog Details</a></li>
+                                                <li><a href="elements.html">Element</a></li>
+                                            </ul>
+                                        </li> -->
+                                            <li><a href="{% url 'contact'%}">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="header-right-btn f-right d-none d-lg-block ml-30">
+                                    <a href="#register" class="btn header-btn">Register Now!</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    <main>
+        <!--? slider Area Start-->
+        <div class="slider-area position-relative">
+            <div class="slider-active">
+                <!-- Single Slider -->
+                <div class="single-slider slider-height d-flex align-items-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-8 col-lg-8 col-md-9 col-sm-10">
+                                <div class="hero__caption">
+                                    <span data-animation="fadeInLeft" data-delay=".1s">Google Developer Student Clubs -
+                                        Ghana</span>
+                                    <h1 data-animation="fadeInLeft" data-delay=".5s">Career Development Summit 24'</h1>
+                                    <!-- Hero-btn -->
+                                    <div class="slider-btns">
+                                        <a data-animation="fadeInLeft" data-delay="1.0s" href="#sponsor"
+                                            class="btn hero-btn">Become a Sponsor 💰</a>
+                                        <a data-animation="fadeInRight" data-delay="1.0s" class="popup-video video-btn"
+                                            href="https://www.youtube.com/watch?v=up68UAfH0d0">
+                                            <i class="fas fa-play"></i></a>
+                                        <p class="video-cap d-none d-sm-blcok" data-animation="fadeInRight"
+                                            data-delay="1.0s">Story Vidoe<br> Watch</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Slider -->
+                <div class="single-slider slider-height d-flex align-items-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-8 col-lg-8 col-md-9 col-sm-10">
+                                <div class="hero__caption">
+                                    <span data-animation="fadeInLeft" data-delay=".1s">Committed to success</span>
+                                    <h1 data-animation="fadeInLeft" data-delay=".5s">Digital Conference For Designers
+                                    </h1>
+                                    <!-- Hero-btn -->
+                                    <div class="slider-btns">
+                                        <a data-animation="fadeInLeft" data-delay="1.0s" href="industries.html"
+                                            class="btn hero-btn">Download</a>
+                                        <a data-animation="fadeInRight" data-delay="1.0s" class="popup-video video-btn"
+                                            href="https://www.youtube.com/watch?v=up68UAfH0d0">
+                                            <i class="fas fa-play"></i></a>
+                                        <p class="video-cap d-none d-sm-blcok" data-animation="fadeInRight"
+                                            data-delay="1.0s">Story Vidoe<br> Watch</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Counter Section Begin -->
+            <div class="counter-section d-none d-sm-block">
+                <div class="cd-timer" id="countdown">
+                    <div class="cd-item">
+                        <span>96</span>
+                        <p>Days</p>
+                    </div>
+                    <div class="cd-item">
+                        <span>15</span>
+                        <p>Hrs</p>
+                    </div>
+                    <div class="cd-item">
+                        <span>07</span>
+                        <p>Min</p>
+                    </div>
+                    <div class="cd-item">
+                        <span>02</span>
+                        <p>Sec</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Counter Section End -->
+        </div>
+        <!-- slider Area End-->
+        <!--? About Law Start-->
+        <section class="about-low-area section-padding2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="about-caption mb-50">
+                            <!-- Section Tittle -->
+                            <div class="section-tittle mb-35">
+                                <h2>The first GDSC Ghana Summit.</h2>
+                            </div>
+                            <p>Are you a tech student or aspiring developer in Ghana looking to take your career to the
+                                next level?
+
+                                Join the Google Developer Student Clubs (GDSC) Ghana for the Career Development Summit!
+
+                                This one-day event is packed with workshops, talks, and networking opportunities
+                                designed to equip you with the skills and knowledge you need to succeed in the
+                                ever-evolving tech industry.
+
+                                .</p>
+                            <p>Welcome to the inaugural GDSC Ghana Summit! Don't miss your chance to be part of the
+                                first edition of this groundbreaking event..</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-10">
+                                <div class="single-caption mb-20">
+                                    <div class="caption-icon">
+                                        <span class="flaticon-communications-1"></span>
+                                    </div>
+                                    <div class="caption">
+                                        <h5>Where</h5>
+                                        <p>Dominion University College, Hall 103, Accra-Ghana</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-10">
+                                <div class="single-caption mb-20">
+                                    <div class="caption-icon">
+                                        <span class="flaticon-education"></span>
+                                    </div>
+                                    <div class="caption">
+                                        <h5>When</h5>
+                                        <p>Jun. 29. 2024</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#register" class="btn mt-50">Save your spot 💺</a>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <!-- about-img -->
+                        <div class="about-img ">
+                            <div class="about-font-img d-none d-lg-block">
+                                <img src="{% static 'assets/img/gallery/about2.png' %}" alt="">
+                            </div>
+                            <div class="about-back-img ">
+                                <img src="{% static 'assets/img/gallery/about1.png' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Law End-->
+        <!--? Brand Area Start -->
+
+        <!-- maintain call for speakers here -->
+
+        <section class="team-area pt-180 pb-100 section-bg"
+            data-background="{% static 'assets/img/gallery/section_bg02.png'%}">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 col-md-9">
+                        <!-- Section Tittle -->
+                        <div class="section-tittle section-tittle2 mb-50">
+                            <h2>Call For Speakers📢</h2>
+                            <p> The call for speakers is not yet open. Please stay tuned for updates on this page. </p>
+                            <a href="#" class="btn white-btn mt-30 disabled" tabindex="-1">Submit your talk 🔊</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Speakers area here commented because we don't have speakers yet -->
+        <!-- <section class="team-area pt-180 pb-100 section-bg" data-background="assets/img/gallery/section_bg02.png">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-9">
+                    Section Tittle 
+                    <div class="section-tittle section-tittle2 mb-50">
+                        <h2>The Most Importent Speakers.</h2>
+                        <p>There arge many variations ohf passages of sorem gpsum ilable, but the majority have suffered alteration in.</p>
+                        <a href="#" class="btn white-btn mt-30">View Spackert</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="single-team mb-30">
+                        <div class="team-img">
+                            <img src="{% static 'assets/img/gallery/team1.png' %}" alt="">
+                           Blog Social 
+                            <ul class="team-social">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fas fa-globe"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="team-caption">
+                            <h3><a href="#">Jesscia brown</a></h3>
+                            <p> Co Founder</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="single-team mb-30">
+                        <div class="team-img">
+                            <img src="{% static 'assets/img/gallery/team2.png' %}" alt="">
+                            Blog Social
+                            <ul class="team-social">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fas fa-globe"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="team-caption">
+                            <h3><a href="#">Jesscia brown</a></h3>
+                            <p> Co Founder</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="single-team mb-30">
+                        <div class="team-img">
+                            <img src="{% static 'assets/img/gallery/team3.png' %}" alt="">
+                            Blog Social 
+                            <ul class="team-social">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fas fa-globe"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="team-caption">
+                            <h3><a href="#">brown Rulsan</a></h3>
+                            <p> Co Founder</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="single-team mb-30">
+                        <div class="team-img">
+                            <img src="{% static 'assets/img/gallery/team4.png' %}" alt="">
+                             Blog Social 
+                            <ul class="team-social">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fas fa-globe"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="team-caption">
+                            <h3><a href="#">Jesscia brown</a></h3>
+                            <p> Co Founder</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="single-team mb-30">
+                        <div class="team-img">
+                            <img src="{% static 'assets/img/gallery/team5.png' %}" alt="">
+                             Blog Social 
+                            <ul class="team-social">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fas fa-globe"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="team-caption">
+                            <h3><a href="#">Jesscia brown</a></h3>
+                            <p> Co Founder</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="single-team mb-30">
+                        <div class="team-img">
+                            <img src="{% static 'assets/img/gallery/team6.png' %}" alt="">
+                             Blog Social 
+                            <ul class="team-social">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fas fa-globe"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="team-caption">
+                            <h3><a href="#">wndfert droit</a></h3>
+                            <p> Co Founder</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+        <!-- Brand Area End -->
+        <!--? accordion -->
+        <section class="accordion fix section-padding30">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-5 col-lg-6 col-md-6">
+                        <!-- Section Tittle -->
+                        <div class="section-tittle text-center mb-80">
+                            <h2>Event Schedule</h2>
+                            <p>The event schdueling is still in progress, we shall updated this page when it's ready,
+                                thank you and keep an eye on this space for udpates.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-lg-11">
+                        <div class="properties__button mb-40">
+                            <!--Nav Button  -->
+                            <nav>
+                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"
+                                        href="#nav-home" role="tab" aria-controls="nav-home"
+                                        aria-selected="true">8:00-8:30AM</a>
+                                    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab"
+                                        href="#nav-profile" role="tab" aria-controls="nav-profile"
+                                        aria-selected="false"> 8:30 - 12:00 PM</a>
+                                    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab"
+                                        href="#nav-contact" role="tab" aria-controls="nav-contact"
+                                        aria-selected="false"> 12:00 - 4:00 PM </a>
+                                    <!-- <a class="nav-item nav-link" id="nav-dinner-tab" data-toggle="tab" href="#nav-dinner" role="tab" aria-controls="nav-dinner" aria-selected="false"> Day - 04 </a> -->
+                                </div>
+                            </nav>
+                            <!--End Nav Button  -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <!-- Nav Card -->
+                <div class="tab-content" id="nav-tabContent">
+                    <!-- card one -->
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <div class="row">
+                            <div class="col-lg-11">
+                                <div class="accordion-wrapper">
+                                    <div class="accordion" id="accordionExample">
+                                        <!-- single-one -->
+                                        <div class="card">
+                                            <div class="card-header" id="headingTwo">
+                                                <h2 class="mb-0">
+                                                    <a href="#" class="btn-link collapsed" data-toggle="collapse"
+                                                        data-target="#collapseTwo" aria-expanded="false"
+                                                        aria-controls="collapseTwo">
+                                                        <span>8:00 AM - 8:30 AM</span>
+                                                        <p>Will be updated soon...</p>
+                                                    </a>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo"
+                                                data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    Please make sure you follow our code of coducts.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- single-two -->
+                                        <!-- <div class="card">
+                                        <div class="card-header" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <a href="#" class="btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                    <span>8:30 AM - 9:30 AM</span>
+                                                    <p>Opening conference</p>
+                                                </a>
+                                            </h2>
+                                        </div>
+                                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                There arge many variations ohf passages of sorem gpsum ilable, but the majority have suffered alteration in some form, by ected humour, or randomised words whi.rere arge many variations ohf passages of sorem gpsum ilable.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    single-three 
+                                    <div class="card">
+                                        <div class="card-header" id="headingThree">
+                                            <h2 class="mb-0">
+                                                <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                    <span>8:30 AM - 9:30 AM</span>
+                                                    <p>Conference ending</p>
+                                                </a>
+                                            </h2>
+                                        </div>
+                                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                There arge many variations ohf passages of sorem gpsum ilable, but the majority have suffered alteration in some form, by ected humour, or randomised words whi.rere arge many variations ohf passages of sorem gpsum ilable.
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card two -->
+                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                        <div class="row">
+                            <div class="col-lg-11">
+                                <div class="accordion-wrapper">
+                                    <div class="accordion" id="accordionExample">
+                                        <!-- single-one -->
+                                        <div class="card">
+                                            <div class="card-header" id="headingTwo">
+                                                <h2 class="mb-0">
+                                                    <a href="#" class="btn-link collapsed" data-toggle="collapse"
+                                                        data-target="#collapseTwo2" aria-expanded="false"
+                                                        aria-controls="collapseTwo2">
+                                                        <span>8:30 AM - 12:00 PM</span>
+                                                        <p>Will be updated Soon.</p>
+                                                    </a>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseTwo2" class="collapse show" aria-labelledby="headingTwo"
+                                                data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    There arge many variations ohf passages of sorem gpsum ilable, but
+                                                    the majority have suffered alteration in some form, by ected humour,
+                                                    or randomised words whi.rere arge many variations ohf passages of
+                                                    sorem gpsum ilable.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- single-two -->
+                                        <!-- <div class="card">
+                                        <div class="card-header" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <a href="#" class="btn-link" data-toggle="collapse" data-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
+                                                    <span>8:30 AM - 9:30 AM</span>
+                                                    <p>Opening conference</p>
+                                                </a>
+                                            </h2>
+                                        </div>
+                                        <div id="collapseOne1" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                There arge many variations ohf passages of sorem gpsum ilable, but the majority have suffered alteration in some form, by ected humour, or randomised words whi.rere arge many variations ohf passages of sorem gpsum ilable.
+                                            </div>
+                                        </div>
+                                    </div>
+                                     single-three -->
+                                        <!-- <div class="card">
+                                        <div class="card-header" id="headingThree">
+                                            <h2 class="mb-0">
+                                                <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapseThree3" aria-expanded="false" aria-controls="collapseThree3">
+                                                    <span>8:30 AM - 9:30 AM</span>
+                                                    <p>Conference ending</p>
+                                                </a>
+                                            </h2>
+                                        </div>
+                                        <div id="collapseThree3" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                There arge many variations ohf passages of sorem gpsum ilable, but the majority have suffered alteration in some form, by ected humour, or randomised words whi.rere arge many variations ohf passages of sorem gpsum ilable.
+                                            </div>
+                                        </div>
+                                    </div>  -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card three -->
+                    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                        <div class="row">
+                            <div class="col-lg-11">
+                                <div class="accordion-wrapper">
+                                    <div class="accordion" id="accordionExample">
+                                        <!-- single-one -->
+                                        <div class="card">
+                                            <div class="card-header" id="headingTwo">
+                                                <h2 class="mb-0">
+                                                    <a href="#" class="btn-link collapsed" data-toggle="collapse"
+                                                        data-target="#collapseTwo01" aria-expanded="false"
+                                                        aria-controls="collapseTwo01">
+                                                        <span>12:00 PM - 4:00 PM</span>
+                                                        <p>Will be updated soon.</p>
+                                                    </a>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseTwo01" class="collapse show" aria-labelledby="headingTwo"
+                                                data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    There arge many variations ohf passages of sorem gpsum ilable, but
+                                                    the majority have suffered alteration in some form, by ected humour,
+                                                    or randomised words whi.rere arge many variations ohf passages of
+                                                    sorem gpsum ilable.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- single-two -->
+                                        <!-- <div class="card">
+                                            <div class="card-header" id="headingOne">
+                                                <h2 class="mb-0">
+                                                    <a href="#" class="btn-link" data-toggle="collapse" data-target="#collapseOne02" aria-expanded="true" aria-controls="collapseOne02">
+                                                        <span>8:30 AM - 9:30 AM</span>
+                                                        <p>Opening conference</p>
+                                                    </a>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseOne02" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    There arge many variations ohf passages of sorem gpsum ilable, but the majority have suffered alteration in some form, by ected humour, or randomised words whi.rere arge many variations ohf passages of sorem gpsum ilable.
+                                                </div>
+                                            </div>
+                                        </div>
+                                         single-three 
+                                        <div class="card">
+                                            <div class="card-header" id="headingThree">
+                                                <h2 class="mb-0">
+                                                    <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapseThree03" aria-expanded="false" aria-controls="collapseThree03">
+                                                        <span>8:30 AM - 9:30 AM</span>
+                                                        <p>Conference ending</p>
+                                                    </a>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseThree03" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    There arge many variations ohf passages of sorem gpsum ilable, but the majority have suffered alteration in some form, by ected humour, or randomised words whi.rere arge many variations ohf passages of sorem gpsum ilable.
+                                                </div>
+                                            </div>
+                                        </div>  -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card Four -->
+                    <div class="tab-pane fade" id="nav-dinner" role="tabpanel" aria-labelledby="nav-dinner">
+                        <div class="row">
+                            <div class="col-lg-11">
+                                <div class="accordion-wrapper">
+                                    <div class="accordion" id="accordionExample">
+                                        <!-- single-one -->
+                                        <div class="card">
+                                            <div class="card-header" id="headingTwo">
+                                                <h2 class="mb-0">
+                                                    <a href="#" class="btn-link collapsed" data-toggle="collapse"
+                                                        data-target="#collapseTwo10" aria-expanded="false"
+                                                        aria-controls="collapseTwo10">
+                                                        <span>8:30 AM - 9:30 AM</span>
+                                                        <p>Snackes</p>
+                                                    </a>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseTwo10" class="collapse show" aria-labelledby="headingTwo"
+                                                data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    There arge many variations ohf passages of sorem gpsum ilable, but
+                                                    the majority have suffered alteration in some form, by ected humour,
+                                                    or randomised words whi.rere arge many variations ohf passages of
+                                                    sorem gpsum ilable.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- single-two -->
+                                        <div class="card">
+                                            <div class="card-header" id="headingOne">
+                                                <h2 class="mb-0">
+                                                    <a href="#" class="btn-link" data-toggle="collapse"
+                                                        data-target="#collapseOne20" aria-expanded="true"
+                                                        aria-controls="collapseOne20">
+                                                        <span>8:30 AM - 9:30 AM</span>
+                                                        <p>Opening conference</p>
+                                                    </a>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseOne20" class="collapse" aria-labelledby="headingOne"
+                                                data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    There arge many variations ohf passages of sorem gpsum ilable, but
+                                                    the majority have suffered alteration in some form, by ected humour,
+                                                    or randomised words whi.rere arge many variations ohf passages of
+                                                    sorem gpsum ilable.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- single-three -->
+                                        <div class="card">
+                                            <div class="card-header" id="headingThree">
+                                                <h2 class="mb-0">
+                                                    <a href="#" class="btn-link collapsed" data-toggle="collapse"
+                                                        data-target="#collapseThree30" aria-expanded="false"
+                                                        aria-controls="collapseThree30">
+                                                        <span>8:30 AM - 9:30 AM</span>
+                                                        <p>Conference ending</p>
+                                                    </a>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseThree30" class="collapse" aria-labelledby="headingThree"
+                                                data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    There arge many variations ohf passages of sorem gpsum ilable, but
+                                                    the majority have suffered alteration in some form, by ected humour,
+                                                    or randomised words whi.rere arge many variations ohf passages of
+                                                    sorem gpsum ilable.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Nav Card -->
+            </div>
+        </section>
+        <!-- accordion End -->
+        <!--? gallery Products Start -->
+        <div class="gallery-area fix">
+            <div class="container-fluid p-0">
+                <div class="row no-gutters">
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="gallery-box">
+                            <div class="single-gallery">
+                                <div class="gallery-img "
+                                    style="background-image: url({% static 'assets/img/hero/tam.jpg '%});"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="gallery-box">
+                            <div class="single-gallery">
+                                <div class="gallery-img "
+                                    style="background-image: url({% static 'assets/img/hero/grace.jpg '%});"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="gallery-box">
+                            <div class="single-gallery">
+                                <div class="gallery-img "
+                                    style="background-image: url({% static 'assets/img/hero/tam1.jpg '%});"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="gallery-box">
+                            <div class="single-gallery">
+                                <div class="gallery-img "
+                                    style="background-image: url({% static 'assets/img/hero/atu.jpg '%});"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="gallery-box">
+                            <div class="single-gallery">
+                                <div class="gallery-img "
+                                    style="background-image: url({% static 'assets/img/hero/speaker.jpg '%});"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="gallery-box">
+                            <div class="single-gallery">
+                                <div class="gallery-img "
+                                    style="background-image: url({% static 'assets/img/hero/Julius11.jpg '%});"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- gallery Products End -->
+        <!--? Pricing Card Start -->
+        <section class="pricing-card-area section-padding2" id="sponsor">
+            <div class="container">
+                <!-- Section Tittle -->
+                <div class="row justify-content-center">
+                    <div class="col-lg-5 col-md-8">
+                        <div class="section-tittle text-center mb-100">
+                            <h2>Become a Sponsor </h2>
+                            <p>There arge many variations ohf passages of sorem gp ilable, but the majority have ssorem
+                                gp iluffe.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10">
+                        <div class="single-card sponsor-gold text-center mb-30">
+                            <div class="card-top">
+                                <span>Gold Package</span>
+                                <h4>GHC 1,500</h4>
+                            </div>
+                            <div class="card-bottom">
+                                <ul>
+                                    <li>● Company logo on website.</li>
+                                    <li>● Special Social media shoutouts.</li>
+                                    <li>● Display Banner at event center.</li>
+                                    <li>● Promotional Swags for attendees.</li>
+                                    <p style="color: gold;">Download the Brochure to see more.</p>
+
+                                </ul>
+                                <a href="{% static '/assets/sponsors/sponsorship-brochure.pdf'%}"
+                                    class="black-btn">Download</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10">
+                        <div class="single-card active text-center mb-30">
+                            <div class="card-top">
+                                <span>Platinum Package</span>
+                                <h4>GHC 2,000</h4>
+                            </div>
+                            <div class="card-bottom">
+                                <ul>
+                                    <li>● Company logo on website.</li>
+                                    <li>● Display Banner at event center.</li>
+                                    <li>● Special Social media shoutouts.</li>
+                                    <li>● Product pitch during event (5mins).</li>
+                                    <p style="color: gold;">Download the Brochure to see more.</p>
+
+                                </ul>
+                                <a href="{% static '/assets/sponsors/sponsorship-brochure.pdf'%}"
+                                    class="black-btn">Download</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10">
+                        <div class="single-card text-center mb-30">
+                            <div class="card-top">
+                                <span>Silver Package </span>
+                                <h4>GHC 1,000</h4>
+                            </div>
+                            <div class="card-bottom">
+                                <ul>
+                                    <li>● Special Social media shoutouts.</li>
+                                    <li>● Company logo printed on shirts.</li>
+                                    <li>● Promotional Swags for attendees.</li>
+                                    <li>● Products Pitch</li>
+                                    <p style="color: gold;">Download the Brochure to see more.</p>
+
+                                </ul>
+                                <a href="{% static '/assets/sponsors/sponsorship-brochure.pdf'%}" class="black-btn"
+                                    download>Download</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Pricing Card End -->
+        <!--? Brand Area Start-->
+        <section class="work-company section-padding30" style="background: #2e0e8c;">
+            <div class="container">
+                <div class="d-flex flex-column align-items-center">
+                    <!-- Section Tittle -->
+                    <div class="section-tittle section-tittle2 mb-50">
+                        <h2>GDSC Organizing Schools.</h2>
+                        <p>These are the Organizing schools for the first edition of Career Development Summit.</p>
+                    </div>
+                    <div class="logo-area">
+                        <div class="d-flex flex-wrap justify-content-center">
+                            <div class="single-logo mb-30">
+                                <img class="school-logo" src="{% static 'assets/img/schools/atulogo.png' %}" alt="">
+                            </div>
+                            <div class="single-logo mb-30">
+                                <img class="school-logo" src="{% static 'assets/img/schools/Central.jpg' %}" alt="">
+                            </div>
+                            <div class="single-logo mb-30">
+                                <img class="school-logo" src="{% static 'assets/img/schools/KINGS-LOGO.png' %}" alt="">
+                            </div>
+                            <div class="single-logo mb-30">
+                                <img class="school-logo" src="{% static 'assets/img/schools/ucc.png' %}" alt="">
+                            </div>
+                            <div class="single-logo mb-30">
+                                <img class="school-logo" src="{% static 'assets/img/schools/ug.png' %}" alt="">
+                            </div>
+                            <div class="single-logo mb-30">
+                                <img class="school-logo" src="{% static 'assets/img/schools/dominion.jpg' %}" alt="">
+                            </div>
+                            <div class="single-logo mb-30">
+                                <img class="school-logo" src="{% static 'assets/img/schools/LOGO.png' %}" alt="">
+                            </div>
+                            <div class="single-logo mb-30">
+                                <img class="school-logo" src="{% static 'assets/img/schools/acity.png' %}" alt="">
+                            </div>
+                            <div class="single-logo mb-30">
+                                <img class="school-logo" src="{% static 'assets/img/schools/allnat.png' %}" alt="">
+                            </div>
+                            <div class="single-logo mb-30">
+                                <!-- <img class="school-logo" src="{% static 'assets/img/schools/atulogo.png' %}" alt=""> -->
+                            </div>
+                            <div class="single-logo mb-30">
+                                <!-- <img class="school-logo" src="{% static 'assets/img/schools/atulogo.png' %}" alt=""> -->
+                            </div>
+                            <div class="single-logo mb-30">
+                                <!-- <img class="school-logo" src="{% static 'assets/img/schools/atulogo.png' %}" alt=""> -->
+                            </div>
+                            <!-- Repeat for other logos -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Brand Area End-->
+        <!--? Blog Area Start -->
+        <section class="home-blog-area section-padding30" id="register">
+            <div class="container">
+                <!-- Section Tittle -->
+                <div class="row justify-content-center">
+                    <div class="col-lg-5 col-md-8">
+                        <div class="section-tittle text-center mb-50">
+                            <h2 class="register-head">Register for CDS 24'</h2>
+                            <p>We just need some few details and your seat is reserved😃.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- forms will go in here -->
+                <form method="POST" action="{% url 'home' %}#register">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" name="fullname" class="form-control" id="fullname"
+                            placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group py-1 ">
+                        <label for="education">Education</label>
+                        <select class="form-control" name="education" id="education">
+                            <option>Graduate</option>
+                            <option>Non-Graduate</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group py-1">
+                        <label for="School">School Name</label>
+                        <input type="School" class="form-control" name="school" id="School"
+                            placeholder="if you selected Non-Graduate Enter your School's Name here">
+                    </div>
+
+
+                    <div class="form-group py-1">
+                        <label for="whatsapp Number">Whatsapp Number </label>
+                        <input type="whatsapp Number" name="whatsapp_number" class="form-control" id="whatsapp Number"
+                            placeholder="Enter your whatsapp Number">
+                    </div>
+
+                    <div class="form-group py-1">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email">
+                    </div>
+
+                    <!-- a success message -->
+                    {% if messages %}
+                    <ul class="messages">
+                        {% for message in messages %}
+                        <li class="{{ message.tags }}">
+                            {{ message }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+
+            </div>
+        </section>
+        <!-- Blog Area End -->
+    </main>
+
+
+
+
+    {% endblock %}
