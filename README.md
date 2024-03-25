@@ -59,4 +59,4 @@ If you want to contribute to this project, please create a pull request. For maj
 
 ## License
 
-Include information about the license, if any.$ gdsc-ghana
+This project is licensed under the terms of the MIT License. See the [LICENSE](LICENSE) file for details.
