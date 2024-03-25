@@ -37,4 +37,5 @@ def HomePage(request):
 
 
 def ContactUs(request):
+
     return render(request, 'contact.html')
