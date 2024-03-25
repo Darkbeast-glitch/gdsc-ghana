@@ -49,6 +49,12 @@ form {
     .register-head{
         font-size: 150px;
     }
+
+
+    .small-logo {
+        width: 200px; /* adjust as needed */
+    }
+  
 }
 /* call for speakers css */
 .team-img {
