@@ -54,6 +54,8 @@ form {
     .small-logo {
         width: 200px; /* adjust as needed */
     }
+
+  
   
 }
 /* call for speakers css */
@@ -70,3 +72,7 @@ form {
     height: 100px;
     object-fit: contain;
 }
+
+
+/* gallery area */
+
