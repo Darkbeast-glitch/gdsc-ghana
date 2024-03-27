@@ -18,6 +18,30 @@
     li.error {
         color: red;
     }
+
+    @media (max-width: 767px) {
+    .gallery-area {
+        display: none;
+    }
+
+        .main-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .logo {
+        flex: 1;
+    }
+    .mobile_menu {
+        flex: 1;
+        text-align: right;
+    }
+    
+    .logo img {
+        height: 50px; /* Adjust this value as needed */
+        width: auto; /* This will maintain the image's aspect ratio */
+    }
+}
 </style>
 
 <body>
@@ -28,7 +52,7 @@
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
                     <!-- Gdsc ghana loading logo -->
-                    <img src="{% static 'assets/img/logo/career.png' %}" alt="Gdsc Ghana">
+                    <img src="{% static 'assets/img/logo/career.png' %}"  alt="Gdsc Ghana">
                 </div>
             </div>
         </div>
@@ -44,7 +68,7 @@
                         <div class="col-xl-2 col-lg-2 col-md-1">
                             <div class="logo">
                                 <a href="/"><img class="small-logo"
-                                        src="{% static 'assets/img/logo/career.png' %}" alt=""></a>
+                                        src="{% static 'assets/img/logo/career.png' %}"  alt="menu logo"></a>
                             </div>
                         </div>
                         <div class="col-xl-10 col-lg-10 col-md-10">
@@ -101,7 +125,7 @@
                                         <a data-animation="fadeInLeft" data-delay="1.0s" href="#sponsor"
                                             class="btn hero-btn">Become a Sponsor 💰</a>
                                         <a data-animation="fadeInRight" data-delay="1.0s" class="popup-video video-btn"
-                                            href="https://www.youtube.com/watch?v=up68UAfH0d0">
+                                            href="">
                                             <i class="fas fa-play"></i></a>
                                         <p class="video-cap d-none d-sm-blcok" data-animation="fadeInRight"
                                             data-delay="1.0s">Story Vidoe<br> Watch</p>
@@ -213,7 +237,7 @@
                         <!-- about-img -->
                         <div class="about-img ">
                             <div class="about-font-img d-none d-lg-block">
-                                <img src="{% static 'assets/img/hero/tam.jpg' %}" style="width: 95vh; border-radius:10px" alt="">
+                                <img src="{% static 'assets/img/hero/tam.jpg' %}" style="width: 85vh; border-radius:10px" alt="">
                             </div>
 
                                 <!--<img src="{% static 'assets/img/hero/tam.jpg' %}" alt="">-->
@@ -484,10 +508,7 @@
                                             <div id="collapseTwo2" class="collapse show" aria-labelledby="headingTwo"
                                                 data-parent="#accordionExample">
                                                 <div class="card-body">
-                                                    There arge many variations ohf passages of sorem gpsum ilable, but
-                                                    the majority have suffered alteration in some form, by ected humour,
-                                                    or randomised words whi.rere arge many variations ohf passages of
-                                                    sorem gpsum ilable.
+                                                    Working on it..
                                                 </div>
                                             </div>
                                         </div>
@@ -740,8 +761,7 @@
                     <div class="col-lg-5 col-md-8">
                         <div class="section-tittle text-center mb-100">
                             <h2>Become a Sponsor </h2>
-                            <p>There arge many variations ohf passages of sorem gp ilable, but the majority have ssorem
-                                gp iluffe.</p>
+                            <p>Become a sponsor for our event and help us make a difference in the tech community. Your support will provide valuable opportunities for students and professionals alike. Contact us for more details.</p>
                         </div>
                     </div>
                 </div>
