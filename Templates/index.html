@@ -24,18 +24,7 @@
         display: none;
     }
 
-        .main-header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .logo {
-        flex: 1;
-    }
-    .mobile_menu {
-        flex: 1;
-        text-align: right;
-    }
+  
     
     .logo img {
         height: 50px; /* Adjust this value as needed */
@@ -191,8 +180,8 @@
                     <div class="col-lg-6 col-md-12">
                         <div class="about-caption mb-50">
                             <!-- Section Tittle -->
-                            <div class="section-tittle mb-35">
-                                <h2>The first GDSC Ghana Summit.</h2>
+                            <div class="section-tittle  mb-35">
+                                <h2 style="text-align: start;">The first GDSC Ghana Summit.</h2>
                             </div>
                             <p>Are you a tech student or aspiring developer in Ghana looking to take your career to the
                                 next level?
@@ -237,7 +226,7 @@
                         <!-- about-img -->
                         <div class="about-img ">
                             <div class="about-font-img d-none d-lg-block">
-                                <img src="{% static 'assets/img/hero/tam.jpg' %}" style="width: 85vh; border-radius:10px" alt="">
+                                <img src="{% static 'assets/img/hero/tam.jpg' %}" style="width: 85vh; margin-bottom: 60px; border-radius:10px" alt="">
                             </div>
 
                                 <!--<img src="{% static 'assets/img/hero/tam.jpg' %}" alt="">-->
@@ -252,8 +241,7 @@
 
         <!-- maintain call for speakers here -->
 
-        <section class="team-area pt-180 pb-100 section-bg"
-            data-background="{% static 'assets/img/gallery/section_bg02.png'%}">
+        <section class="team-area pt-180 pb-100 section-bg" style="background: rgb(128, 128, 128);">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-6 col-md-9">
@@ -770,7 +758,7 @@
                         <div class="single-card sponsor-gold text-center mb-30">
                             <div class="card-top">
                                 <span>Gold Package</span>
-                                <h4>GHC 1,500</h4>
+                                <h4>GHC 2,000</h4>
                             </div>
                             <div class="card-bottom">
                                 <ul>
@@ -778,7 +766,7 @@
                                     <li>● Special Social media shoutouts.</li>
                                     <li>● Display Banner at event center.</li>
                                     <li>● Promotional Swags for attendees.</li>
-                                    <p style="color: gold;">Download the Brochure to see more.</p>
+                                    <p style="color:#ea4335; font-size: 15px;">Download the Brochure to see more.</p>
 
                                 </ul>
                                 <a href="{% static '/assets/sponsors/sponsorship-brochure.pdf'%}"
@@ -790,7 +778,7 @@
                         <div class="single-card active text-center mb-30">
                             <div class="card-top">
                                 <span>Platinum Package</span>
-                                <h4>GHC 2,000</h4>
+                                <h4>GHC 3,000</h4>
                             </div>
                             <div class="card-bottom">
                                 <ul>
@@ -798,7 +786,7 @@
                                     <li>● Display Banner at event center.</li>
                                     <li>● Special Social media shoutouts.</li>
                                     <li>● Product pitch during event (5mins).</li>
-                                    <p style="color: gold;">Download the Brochure to see more.</p>
+                                    <p style="color: gold; font-size:12px;">Download the Brochure to see more.</p>
 
                                 </ul>
                                 <a href="{% static '/assets/sponsors/sponsorship-brochure.pdf'%}"
@@ -810,7 +798,7 @@
                         <div class="single-card text-center mb-30">
                             <div class="card-top">
                                 <span>Silver Package </span>
-                                <h4>GHC 1,000</h4>
+                                <h4>GHC 1,500</h4>
                             </div>
                             <div class="card-bottom">
                                 <ul>
@@ -818,7 +806,7 @@
                                     <li>● Company logo printed on shirts.</li>
                                     <li>● Promotional Swags for attendees.</li>
                                     <li>● Products Pitch</li>
-                                    <p style="color: gold;">Download the Brochure to see more.</p>
+                                    <p style="color: gold; font-size: 15px;">Download the Brochure to see more.</p>
 
                                 </ul>
                                 <a href="{% static '/assets/sponsors/sponsorship-brochure.pdf'%}" class="black-btn"
@@ -827,55 +815,55 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>  
         </section>
         <!-- Pricing Card End -->
         <!--? Brand Area Start-->
-        <section class="work-company section-padding30" style="background: #2e0e8c;">
-            <div class="container">
-                <div class="d-flex flex-column align-items-center">
+       <section class="work-company section-padding30" style="background: rgb(128, 128, 128); --darkreader-inline-bgimage: initial; --darkreader-inline-bgcolor: #250b70;" data-darkreader-inline-bgimage="" data-darkreader-inline-bgcolor="">
+            <div class="container" bis_skin_checked="1">
+                <div class="d-flex flex-column align-items-center" bis_skin_checked="1">
                     <!-- Section Tittle -->
-                    <div class="section-tittle section-tittle2 mb-50">
+                    <div class="section-tittle section-tittle2 mb-50" bis_skin_checked="1">
                         <h2>GDSC Organizing Schools.</h2>
                         <p>These are the Organizing schools for the first edition of Career Development Summit.</p>
                     </div>
-                    <div class="logo-area">
-                        <div class="d-flex flex-wrap justify-content-center">
-                            <div class="single-logo mb-30">
-                                <img class="school-logo" src="{% static 'assets/img/schools/atulogo.png' %}" alt="">
+                    <div class="logo-area" bis_skin_checked="1">
+                        <div class="d-flex flex-wrap justify-content-center" bis_skin_checked="1">
+                            <div class="single-logo mb-30" bis_skin_checked="1">
+                                <img class="school-logo" src="/static/assets/img/schools/atulogo.png" alt="">
                             </div>
-                            <div class="single-logo mb-30">
-                                <img class="school-logo" src="{% static 'assets/img/schools/Central.jpg' %}" alt="">
+                            <div class="single-logo mb-30" bis_skin_checked="1">
+                                <img class="school-logo" src="/static/assets/img/schools/Central.jpg" alt="">
                             </div>
-                            <div class="single-logo mb-30">
-                                <img class="school-logo" src="{% static 'assets/img/schools/KINGS-LOGO.png' %}" alt="">
+                            <div class="single-logo mb-30" bis_skin_checked="1">
+                                <img class="school-logo" src="/static/assets/img/schools/KINGS-LOGO.png" alt="">
                             </div>
-                            <div class="single-logo mb-30">
-                                <img class="school-logo" src="{% static 'assets/img/schools/ucc.png' %}" alt="">
+                            <div class="single-logo mb-30" bis_skin_checked="1">
+                                <img class="school-logo" src="/static/assets/img/schools/ucc.png" alt="">
                             </div>
-                            <div class="single-logo mb-30">
-                                <img class="school-logo" src="{% static 'assets/img/schools/ug.png' %}" alt="">
+                            <div class="single-logo mb-30" bis_skin_checked="1">
+                                <img class="school-logo" src="/static/assets/img/schools/ug.png" alt="">
                             </div>
-                            <div class="single-logo mb-30">
-                                <img class="school-logo" src="{% static 'assets/img/schools/dominion.jpg' %}" alt="">
+                            <div class="single-logo mb-30" bis_skin_checked="1">
+                                <img class="school-logo" src="/static/assets/img/schools/dominion.jpg" alt="">
                             </div>
-                            <div class="single-logo mb-30">
-                                <img class="school-logo" src="{% static 'assets/img/schools/LOGO.png' %}" alt="">
+                            <div class="single-logo mb-30" bis_skin_checked="1">
+                                <img class="school-logo" src="/static/assets/img/schools/LOGO.png" alt="">
                             </div>
-                            <div class="single-logo mb-30">
-                                <img class="school-logo" src="{% static 'assets/img/schools/acity.png' %}" alt="">
+                            <div class="single-logo mb-30" bis_skin_checked="1">
+                                <img class="school-logo" src="/static/assets/img/schools/acity.png" alt="">
                             </div>
-                            <div class="single-logo mb-30">
-                                <img class="school-logo" src="{% static 'assets/img/schools/allnat.png' %}" alt="">
+                            <div class="single-logo mb-30" bis_skin_checked="1">
+                                <img class="school-logo" src="/static/assets/img/schools/allnat.png" alt="">
                             </div>
-                            <div class="single-logo mb-30">
-                                <!-- <img class="school-logo" src="{% static 'assets/img/schools/atulogo.png' %}" alt=""> -->
+                            <div class="single-logo mb-30" bis_skin_checked="1">
+                                <!-- <img class="school-logo" src="/static/assets/img/schools/atulogo.png" alt=""> -->
                             </div>
-                            <div class="single-logo mb-30">
-                                <!-- <img class="school-logo" src="{% static 'assets/img/schools/atulogo.png' %}" alt=""> -->
+                            <div class="single-logo mb-30" bis_skin_checked="1">
+                                <!-- <img class="school-logo" src="/static/assets/img/schools/atulogo.png" alt=""> -->
                             </div>
-                            <div class="single-logo mb-30">
-                                <!-- <img class="school-logo" src="{% static 'assets/img/schools/atulogo.png' %}" alt=""> -->
+                            <div class="single-logo mb-30" bis_skin_checked="1">
+                                <!-- <img class="school-logo" src="/static/assets/img/schools/atulogo.png" alt=""> -->
                             </div>
                             <!-- Repeat for other logos -->
                         </div>
